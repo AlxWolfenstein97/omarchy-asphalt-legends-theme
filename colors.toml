@@ -1,0 +1,35 @@
+mode = "dark"
+
+# Neon night pack — magenta city glow + cyan nitro
+accent = "#FF3D9A"
+selection = "#2A1848"
+muted = "#5A4A78"
+
+background = "#0B0618"
+dark_background = "#070412"
+darker_background = "#04020C"
+lighter_background = "#1A1030"
+
+foreground = "#F2E8FF"
+dark_foreground = "#7A6A9A"
+light_foreground = "#D4C4F0"
+bright_foreground = "#FFFFFF"
+
+hyprland_active_border = "rgba(FF3D9Aee) rgba(00E8FFee) 45deg"
+hyprland_inactive_border = "rgba(2A1848aa)"
+
+red = "#FF3355"
+yellow = "#FFD400"
+orange = "#FF6B1A"
+green = "#3DFF9A"
+cyan = "#00E8FF"
+blue = "#5B7CFF"
+magenta = "#FF3D9A"
+brown = "#6B3A4A"
+
+bright_red = "#FF6680"
+bright_yellow = "#FFE566"
+bright_green = "#7AFFB8"
+bright_cyan = "#66F0FF"
+bright_blue = "#8AA4FF"
+bright_magenta = "#FF7AB8"

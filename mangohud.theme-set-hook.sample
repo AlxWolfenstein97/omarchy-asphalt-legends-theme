@@ -1,0 +1,40 @@
+#!/bin/bash
+# MangoHud theme-set hook (optional)
+#
+# THEME PACK USERS — install once:
+#   1. Copy mangohud.conf.tpl → ~/.config/omarchy/themed/mangohud.conf.tpl
+#   2. Copy this file → ~/.config/omarchy/hooks/theme-set.d/mangohud
+#      (drop the .sample suffix) and: chmod +x ~/.config/omarchy/hooks/theme-set.d/mangohud
+#   3. Run: omarchy theme set <your-theme>
+#
+# Without this hook, Omarchy still renders mangohud.conf into the active theme
+# directory, but MangoHud only reads ~/.config/MangoHud/MangoHud.conf — so the
+# HUD would not retint until something copies the file here.
+#
+# The .tpl is a full HUD layout (colors come from each theme's colors.toml).
+# Edit ~/.config/omarchy/themed/mangohud.conf.tpl anytime to change which
+# stats show; you usually set layout once and leave it.
+
+set -uo pipefail
+
+theme_conf="${XDG_STATE_HOME:-$HOME/.local/state}/omarchy/current/theme/mangohud.conf"
+[[ -f $theme_conf ]] || theme_conf="$HOME/.config/omarchy/current/theme/mangohud.conf"
+[[ -f $theme_conf ]] || exit 0
+
+dest_dir="${XDG_CONFIG_HOME:-$HOME/.config}/MangoHud"
+dest="$dest_dir/MangoHud.conf"
+mkdir -p "$dest_dir" || exit 0
+
+if [[ -f $dest ]] && cmp -s "$theme_conf" "$dest"; then
+  exit 0
+fi
+
+tmp=$(mktemp "$dest_dir/.mangohud.XXXXXX" 2>/dev/null) || exit 0
+if cp -f "$theme_conf" "$tmp" 2>/dev/null; then
+  chmod 644 "$tmp" 2>/dev/null
+  mv -f "$tmp" "$dest" 2>/dev/null || rm -f "$tmp"
+else
+  rm -f "$tmp"
+fi
+
+exit 0
