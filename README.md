@@ -63,32 +63,64 @@ After that, **every** theme switch retints the HUD from that theme’s `colors.t
 
 ## Extend further with plugins
 
-This repo is **palette + assets** on purpose. For more of the desktop to follow the same colors:
+This repo is **palette + assets** on purpose. Omarchy already colour-coordinates the shell, terminals, and editor from `colors.toml`. The plugins below push that idea as far as it can reasonably go — optional extenders, not required theme baggage. Themes keep working without them; authors can stick to the snappier stock pipeline if they prefer.
 
-- **[Accord](https://github.com/vonsensey/accord)** — GTK / Qt bridge (file manager, File Roller, qBittorrent, qpwgraph, and friends). Install: `omarchy plugin add https://github.com/vonsensey/accord --enable`  
-  Browse more on the [Omarchy Plugins](https://plugins.omarchy.org/) site.
-- **[Omacord](https://github.com/ASwenia/omacord)** — Vesktop / Vencord Discord client follows Omarchy themes live: `omarchy plugin add https://github.com/ASwenia/omacord --enable`
+They do **not** depend on each other. Pick what you want; run the whole inch-a-lada if you want the desktop to feel like yours.
 
-Accord in action is basically “your file manager finally wears the theme.” Omacord on Vesktop looks like this (DMs / names redacted):
+### The big sweep
+
+- **[Chroma](https://github.com/AlxWolfenstein97/chroma)** — GTK3 / GTK4 / libadwaita + Qt in one hook (file manager, Document Viewer, BleachBit, File Roller, qBittorrent, qpwgraph, …). No Style picker: it paints the toolkits most apps already use, not each app by name.  
+  `omarchy plugin add https://github.com/AlxWolfenstein97/chroma.git --enable`  
+  Craft inspiration: [Accord](https://github.com/vonsensey/accord) proved the Omarchy → libadwaita CSS bridge; Chroma is the extender this theme points people at.
+
+### One-surface Style plugins (palette previews + apply)
+
+These sync from `colors.toml` across **every** installed theme (stock, user, foreign). Several ship a Style carousel so you can preview the same surface across all your themes faster than flipping by hand — even when `theme-set` already keeps them in lockstep.
+
+| Plugin | What it themes |
+|--------|----------------|
+| **[OmaOBS](https://github.com/AlxWolfenstein97/omaobs)** | OBS Studio (real Yami `Omarchy.ovt`) |
+| **[OmaCursor](https://github.com/AlxWolfenstein97/omacursor)** | Pointer / Adwaita XCursor recolor (+ optional SDDM) |
+| **[OmaBoot](https://github.com/AlxWolfenstein97/omaboot)** | Limine boot menu colours |
+| **[OmaVT](https://github.com/AlxWolfenstein97/omavt)** | Virtual console / TTY palette |
+| **[OmaTTY](https://github.com/AlxWolfenstein97/omatty)** | Console font (Terminus-first, accessibility) |
+
+```bash
+omarchy plugin add https://github.com/AlxWolfenstein97/omaobs.git --enable
+omarchy plugin add https://github.com/AlxWolfenstein97/omacursor.git --enable
+omarchy plugin add https://github.com/AlxWolfenstein97/omaboot.git --enable
+omarchy plugin add https://github.com/AlxWolfenstein97/omavt.git --enable
+omarchy plugin add https://github.com/AlxWolfenstein97/omatty.git --enable
+```
+
+### Already solved elsewhere (gladly)
+
+- **[Omacord](https://github.com/ASwenia/omacord)** — Vesktop / Vencord Discord follows Omarchy themes live. I did not have to extend the whole theming system for chat myself:  
+  `omarchy plugin add https://github.com/ASwenia/omacord --enable`
+
+Omacord on Vesktop with this theme (DMs / names redacted):
 
 ![Vesktop with Omacord on Asphalt Legends](docs/vesktop-omacord.png)
 
-- **[OMCP](https://github.com/btsouth/omarchy-omcp)** — MCP desktop bridge (themes, windows, screenshots, …). Helped build the theme preview here: `omarchy plugin add https://github.com/btsouth/omarchy-omcp --enable`
+### Agent / desktop bridge
 
-## Accessibility / taste
+- **[OMCP](https://github.com/btsouth/omarchy-omcp)** — MCP desktop bridge (themes, windows, screenshots, …). Helped build the theme preview here:  
+  `omarchy plugin add https://github.com/btsouth/omarchy-omcp --enable`
 
-I’m **mostly blind**. These colors and contrasts are tuned so *I* can read the desktop. They might be loud, odd, or wrong for someone else’s eyes — fork and retune `colors.toml` without guilt.
+Browse more on the [Omarchy Plugins](https://plugins.omarchy.org/) site.
 
-## Git / issues / PRs
+**Honest stop-line:** these extenders only chase places that accept colour data (or a clean conversion). Websites, Steam chrome, document paper in LibreOffice, and similar “own paint engine / remote CSS” surfaces are out of scope on purpose — documented in Chroma’s README. Unthemed beats a half-assed chase.
 
-I don’t know much about git. I may not live in Issues or PRs. It’s a theme — esthetics — so there often isn’t much to “fix.” That said, AI tooling can help me with reviews if something useful shows up. Forks are welcome; it’s a public repo.
+## Taste
+
+Colours and contrast are tuned for what I like to look at. If they feel loud or wrong for you, fork and retune `colors.toml` without guilt. (Console font sizing for low vision lives in [OmaTTY](https://github.com/AlxWolfenstein97/omatty), not this theme.)
 
 ## Credits / legal-ish
 
 - Visual inspiration and reference art from **Gameloft**’s *Asphalt* / *Asphalt Legends* branding and marketing. **Not affiliated with, endorsed by, or sponsored by Gameloft.** Just public pixels arranged into an Omarchy theme — no money, no official product.
 - If Gameloft hates this existing, they can say so and I’ll deal with the repo accordingly.
-- Built with a lot of steering from me and a lot of typing from **Cursor** (Auto / agent on free-trial chaos across emails, whatever). Co-author credit on commits is optional; the wheel was still mine.
+- Theming extenders grew out of time on Archinstall + Hyprland + [Noctalia](https://github.com/noctalia-dev/noctalia-shell) (excellent engine — credit), then got rebuilt as optional Omarchy plugins once 4.x made agentic molding feel real. Cliamp’s Omarchy-themed radio did not hurt the mood either.
 
 ## License
 
-Do whatever you want with this theme pack unless Gameloft (or the law) says otherwise. Fork it, recolor it, ship it in a rice, feed it to an AI. No warranty — it’s wallpaper and hex codes.
+Do whatever you want with this theme pack unless Gameloft (or the law) says otherwise. Fork it, recolor it, ship it in a rice. No warranty — it’s wallpaper and hex codes.
