@@ -67,9 +67,15 @@ This repo is **palette + assets** on purpose. Omarchy already colour-coordinates
 
 They do **not** depend on each other. Pick what you want; run the whole inch-a-lada if you want the desktop to feel like yours.
 
+### Why these even exist
+
+Asphalt Legends landed well *inside* Omarchy’s usual theming system — which is exactly what made me look back at how I’d done things on **Archinstall + Hyprland + [Noctalia](https://github.com/noctalia-dev/noctalia-shell) 4.x**. Omarchy 3.x (and even 4.x before you count the shell) only goes so far on purpose; fair enough. After seeing a theme sit this cleanly on stock Omarchy, I wanted to extend that system with some care: standards for when to stop, traps learned the hard way, and something that could go further than the one-palette manual rice I’d had on Noctalia — while still working across **every** `colors.toml` theme. That also makes it more worth doing *more* themes (mine or anyone else’s who finds these): the desktop can follow the palette farther without each theme shipping a private stack.
+
+The [plugin marketplace](https://plugins.omarchy.org/) feels a bit like a game workshop — except you’re not modding a game, you’re modding the *system*. A few of those “just a few things” DHH talked about, until they add up. These extenders should be on the plugins place soon if they’re not already by the time most people see this. I figured someone else would be first to fill some of these gaps; contributing this kind of thing is still fun, and it gave me a reason to try themes and plugins with AI, and to learn what “they run unsandboxed code” actually means by the time we were touching bootloader colours — you *can* touch everything. That’s how you get thousands of plugins in a month: AI and a powerful shell. I picked up a thing or five for whatever Arch (or car) experiment comes next, if ever.
+
 ### The big sweep
 
-- **[Chroma](https://github.com/AlxWolfenstein97/chroma)** — GTK3 / GTK4 / libadwaita + Qt in one hook (file manager, Document Viewer, BleachBit, File Roller, qBittorrent, qpwgraph, …). No Style picker: it paints the toolkits most apps already use, not each app by name.  
+- **[Chroma](https://github.com/AlxWolfenstein97/chroma)** — GTK3 / GTK4 / libadwaita + Qt in one hook (file manager, Document Viewer, BleachBit, File Roller, qBittorrent, qpwgraph, …). No Style picker: it paints the toolkits most apps already use, not each app by name. Longer “why / where we stop” lives in that README.  
   `omarchy plugin add https://github.com/AlxWolfenstein97/chroma.git --enable`  
   Craft inspiration: [Accord](https://github.com/vonsensey/accord) proved the Omarchy → libadwaita CSS bridge; Chroma is the extender this theme points people at.
 
@@ -104,7 +110,7 @@ Omacord on Vesktop with this theme (DMs / names redacted):
 
 ### Agent / desktop bridge
 
-- **[OMCP](https://github.com/btsouth/omarchy-omcp)** — MCP desktop bridge (themes, windows, screenshots, …). Helped build the theme preview here:  
+- **[OMCP](https://github.com/btsouth/omarchy-omcp)** — MCP desktop bridge (themes, windows, apps, …). Made iterating this theme a lot easier; screenshots sometimes need the agent’s session env wired up depending on the client (Claude-first, others optional). Not my project to patch — credit stays either way:  
   `omarchy plugin add https://github.com/btsouth/omarchy-omcp --enable`
 
 Browse more on the [Omarchy Plugins](https://plugins.omarchy.org/) site.
