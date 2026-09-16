@@ -53,38 +53,28 @@ Style → Unlock → pick this theme (`unlock.png` / `preview-unlock.png`).
 
 ### MangoHud (optional)
 
-Layout lives in the `.tpl` (set once; Goverlay is a fine WYSIWYG to design a layout, then keep colors as `{{ name_strip }}`). Install once from this theme directory:
+**Prefer [OmaHud](https://github.com/AlxWolfenstein97/omahud)** — Style → HUD Themes
+retints colour keys only, so Goverlay (or a hand-tuned conf) keeps your metrics,
+layout, and Right Shift+F12 hide toggle. Theme-set sync matches the desktop
+without the Catppuccin-style “whole file replace” smash.
+
+```sh
+omarchy plugin add https://github.com/AlxWolfenstein97/omahud.git --enable
+```
+
+#### Legacy: full-file themed template
+
+Still shipped for anyone who wants a stock layout baked into Omarchy’s
+`themed/` templates (replaces `MangoHud.conf` on every theme set — smashes
+custom Goverlay layouts). Install once from this theme directory:
 
 ```bash
 bash install-mangohud.sh
 ```
 
-That creates `~/.config/omarchy/themed`, `~/.config/omarchy/hooks/theme-set.d`, and
-`~/.config/MangoHud` if they are missing (a bare `cp` / `install` into a path
-whose parent dir does not exist fails with “No such file or directory”), copies
-the template + hook, and re-applies the current theme so the HUD retints. Manual
-equivalent:
-
-```bash
-mkdir -p ~/.config/omarchy/themed ~/.config/omarchy/hooks/theme-set.d ~/.config/MangoHud
-cp mangohud.conf.tpl ~/.config/omarchy/themed/mangohud.conf.tpl
-install -m 755 mangohud.theme-set-hook.sample ~/.config/omarchy/hooks/theme-set.d/mangohud
-omarchy theme set "Asphalt Legends"
-```
-
-`install -m 755 … mangohud` copies **and** marks executable in one step (a bare
-`chmod +x` fails if the destination path was never created). After that, **every**
-theme switch retints the HUD from that theme’s `colors.toml`. Without the hook,
-the template still renders into the active theme dir, but MangoHud won’t see it.
-
-Goverlay’s cube / HUD preview needs a real GPU path (passthrough or host drivers).
-On a CPU-only nested VM the cube staying dark is normal — not a theme-pack bug.
-Once the `.tpl` has your layout (hidden-by-default + Right Shift+F12 is a fine
-default, same idea as Catppuccin’s MangoHud configs), Goverlay is optional —
-peeps who want a different layout can edit the template (or ask an agent to)
-rather than needing a Style carousel. Per-theme tints stay in `colors.toml`;
-there is no MangoHud Style plugin on purpose (everyone’s layout differs, and
-the colour deltas are quieter than boot/cursor/OBS).
+OmaHud’s installer removes `theme-set.d/mangohud` when present so the two
+approaches do not fight. Goverlay’s cube needs a real GPU path; CPU-only nested
+VMs staying dark is normal.
 
 ## Extend further with plugins
 
@@ -112,6 +102,7 @@ These sync from `colors.toml` across **every** installed theme (stock, user, for
 |--------|----------------|
 | **[OmaOBS](https://github.com/AlxWolfenstein97/omaobs)** | OBS Studio (real Yami `Omarchy.ovt`) |
 | **[OmaCursor](https://github.com/AlxWolfenstein97/omacursor)** | Pointer / Adwaita XCursor recolor (+ optional SDDM) |
+| **[OmaHud](https://github.com/AlxWolfenstein97/omahud)** | MangoHud colours only (Goverlay keeps metrics/layout) |
 | **[OmaBoot](https://github.com/AlxWolfenstein97/omaboot)** | Limine boot menu colours |
 | **[OmaVT](https://github.com/AlxWolfenstein97/omavt)** | Virtual console / TTY palette |
 | **[OmaTTY](https://github.com/AlxWolfenstein97/omatty)** | Console font (Terminus-first, accessibility) |
@@ -119,6 +110,7 @@ These sync from `colors.toml` across **every** installed theme (stock, user, for
 ```bash
 omarchy plugin add https://github.com/AlxWolfenstein97/omaobs.git --enable
 omarchy plugin add https://github.com/AlxWolfenstein97/omacursor.git --enable
+omarchy plugin add https://github.com/AlxWolfenstein97/omahud.git --enable
 omarchy plugin add https://github.com/AlxWolfenstein97/omaboot.git --enable
 omarchy plugin add https://github.com/AlxWolfenstein97/omavt.git --enable
 omarchy plugin add https://github.com/AlxWolfenstein97/omatty.git --enable
