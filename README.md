@@ -53,10 +53,20 @@ Style → Unlock → pick this theme (`unlock.png` / `preview-unlock.png`).
 
 ### MangoHud (optional)
 
-Layout lives in the `.tpl` (set once; Goverlay is a fine WYSIWYG to design a layout, then keep colors as `{{ name_strip }}`). Install once:
+Layout lives in the `.tpl` (set once; Goverlay is a fine WYSIWYG to design a layout, then keep colors as `{{ name_strip }}`). Install once from this theme directory:
 
 ```bash
-mkdir -p ~/.config/omarchy/themed ~/.config/omarchy/hooks/theme-set.d
+bash install-mangohud.sh
+```
+
+That creates `~/.config/omarchy/themed`, `~/.config/omarchy/hooks/theme-set.d`, and
+`~/.config/MangoHud` if they are missing (a bare `cp` / `install` into a path
+whose parent dir does not exist fails with “No such file or directory”), copies
+the template + hook, and re-applies the current theme so the HUD retints. Manual
+equivalent:
+
+```bash
+mkdir -p ~/.config/omarchy/themed ~/.config/omarchy/hooks/theme-set.d ~/.config/MangoHud
 cp mangohud.conf.tpl ~/.config/omarchy/themed/mangohud.conf.tpl
 install -m 755 mangohud.theme-set-hook.sample ~/.config/omarchy/hooks/theme-set.d/mangohud
 omarchy theme set "Asphalt Legends"

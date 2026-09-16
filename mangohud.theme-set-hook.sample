@@ -2,7 +2,9 @@
 # MangoHud theme-set hook (optional)
 #
 # THEME PACK USERS — install once:
-#   1. mkdir -p ~/.config/omarchy/themed ~/.config/omarchy/hooks/theme-set.d
+#   1. Prefer: bash install-mangohud.sh  (from this theme directory)
+#   Or manually:
+#   1. mkdir -p ~/.config/omarchy/themed ~/.config/omarchy/hooks/theme-set.d ~/.config/MangoHud
 #   2. Copy mangohud.conf.tpl → ~/.config/omarchy/themed/mangohud.conf.tpl
 #   3. install -m 755 this file → ~/.config/omarchy/hooks/theme-set.d/mangohud
 #      (drop the .sample suffix; install sets the executable bit)
