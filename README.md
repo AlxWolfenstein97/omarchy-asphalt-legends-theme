@@ -14,10 +14,13 @@ Neon night-pack theme for [Omarchy](https://omarchy.org/): deep purple-black, ma
 
 ```bash
 omarchy theme install https://github.com/AlxWolfenstein97/omarchy-asphalt-legends-theme.git
-omarchy theme set "Asphalt Legends"
 ```
 
-Or clone into place:
+That clones **and** applies the theme (`omarchy-theme-set` runs inside
+`theme install`). Do **not** follow with another `omarchy theme set` — a second
+set skips the first wallpaper and just wastes a switch.
+
+Or clone into place (then you *do* need an explicit set):
 
 ```bash
 git clone https://github.com/AlxWolfenstein97/omarchy-asphalt-legends-theme.git ~/.config/omarchy/themes/asphalt-legends
@@ -53,13 +56,19 @@ Style → Unlock → pick this theme (`unlock.png` / `preview-unlock.png`).
 Layout lives in the `.tpl` (set once; Goverlay is a fine WYSIWYG to design a layout, then keep colors as `{{ name_strip }}`). Install once:
 
 ```bash
+mkdir -p ~/.config/omarchy/themed ~/.config/omarchy/hooks/theme-set.d
 cp mangohud.conf.tpl ~/.config/omarchy/themed/mangohud.conf.tpl
-cp mangohud.theme-set-hook.sample ~/.config/omarchy/hooks/theme-set.d/mangohud
-chmod +x ~/.config/omarchy/hooks/theme-set.d/mangohud
+install -m 755 mangohud.theme-set-hook.sample ~/.config/omarchy/hooks/theme-set.d/mangohud
 omarchy theme set "Asphalt Legends"
 ```
 
-After that, **every** theme switch retints the HUD from that theme’s `colors.toml`. Without the hook, the template still renders into the active theme dir, but MangoHud won’t see it.
+`install -m 755 … mangohud` copies **and** marks executable in one step (a bare
+`chmod +x` fails if the destination path was never created). After that, **every**
+theme switch retints the HUD from that theme’s `colors.toml`. Without the hook,
+the template still renders into the active theme dir, but MangoHud won’t see it.
+
+Goverlay’s cube / HUD preview needs a real GPU path (passthrough or host drivers).
+On a CPU-only nested VM the cube staying dark is normal — not a theme-pack bug.
 
 ## Extend further with plugins
 

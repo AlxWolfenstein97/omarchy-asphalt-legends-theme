@@ -7,9 +7,9 @@
 # THEME PACK AUTHORS / USERS:
 #   Ship mangohud.conf.tpl plus mangohud.theme-set-hook.sample in the theme.
 #   Install once:
+#     mkdir -p ~/.config/omarchy/themed ~/.config/omarchy/hooks/theme-set.d
 #     cp mangohud.conf.tpl ~/.config/omarchy/themed/mangohud.conf.tpl
-#     cp mangohud.theme-set-hook.sample ~/.config/omarchy/hooks/theme-set.d/mangohud
-#     chmod +x ~/.config/omarchy/hooks/theme-set.d/mangohud
+#     install -m 755 mangohud.theme-set-hook.sample ~/.config/omarchy/hooks/theme-set.d/mangohud
 #   Then every `omarchy theme set` retints the HUD from that theme's colors.toml.
 #   Layout lives in the .tpl (set once, tweak anytime); colors always flow.
 #
