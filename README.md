@@ -79,6 +79,12 @@ the template still renders into the active theme dir, but MangoHud won’t see i
 
 Goverlay’s cube / HUD preview needs a real GPU path (passthrough or host drivers).
 On a CPU-only nested VM the cube staying dark is normal — not a theme-pack bug.
+Once the `.tpl` has your layout (hidden-by-default + Right Shift+F12 is a fine
+default, same idea as Catppuccin’s MangoHud configs), Goverlay is optional —
+peeps who want a different layout can edit the template (or ask an agent to)
+rather than needing a Style carousel. Per-theme tints stay in `colors.toml`;
+there is no MangoHud Style plugin on purpose (everyone’s layout differs, and
+the colour deltas are quieter than boot/cursor/OBS).
 
 ## Extend further with plugins
 
