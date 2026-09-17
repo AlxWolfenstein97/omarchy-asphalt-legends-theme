@@ -76,7 +76,7 @@ These sync from `colors.toml` across **every** installed theme (stock, user, for
 |--------|----------------|
 | **[OmaOBS](https://github.com/AlxWolfenstein97/omaobs)** | OBS Studio (real Yami `Omarchy.ovt`) |
 | **[OmaCursor](https://github.com/AlxWolfenstein97/omacursor)** | Pointer / Adwaita XCursor recolor (+ optional SDDM) |
-| **[OmaHud](https://github.com/AlxWolfenstein97/omahud)** | MangoHud colours only (Goverlay keeps metrics/layout) |
+| **[OmaHud](https://github.com/AlxWolfenstein97/omahud)** | MangoHud colours only — live in-game retint; Goverlay keeps metrics/layout (replaces the old full-file `.tpl`) |
 | **[OmaBoot](https://github.com/AlxWolfenstein97/omaboot)** | Limine boot menu colours |
 | **[OmaVT](https://github.com/AlxWolfenstein97/omavt)** | Virtual console / TTY palette |
 | **[OmaTTY](https://github.com/AlxWolfenstein97/omatty)** | Console font (Terminus-first, accessibility) |
