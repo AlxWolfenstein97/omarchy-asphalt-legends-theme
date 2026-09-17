@@ -39,7 +39,6 @@ Cycle wallpapers with `omarchy theme bg next`.
 | `preview.png` | Theme switcher preview |
 | `icon.txt` / `logo.txt` (+ `about.txt` / `screensaver.txt`) | About & screensaver **ASCII** branding |
 | `icon.png` / `logo.png` | Same marks as images (README + optional “Set From Image”) |
-| `mangohud.conf.tpl` + `mangohud.theme-set-hook.sample` | Optional HUD tinting |
 
 ### Branding (About / screensaver)
 
@@ -50,31 +49,6 @@ The `.png` versions are here for the README and for a quick Style → **Set From
 ### Unlock
 
 Style → Unlock → pick this theme (`unlock.png` / `preview-unlock.png`).
-
-### MangoHud (optional)
-
-**Prefer [OmaHud](https://github.com/AlxWolfenstein97/omahud)** — Style → HUD Themes
-retints colour keys only, so Goverlay (or a hand-tuned conf) keeps your metrics,
-layout, and Right Shift+F12 hide toggle. Theme-set sync matches the desktop
-without the Catppuccin-style “whole file replace” smash.
-
-```sh
-omarchy plugin add https://github.com/AlxWolfenstein97/omahud.git --enable
-```
-
-#### Legacy: full-file themed template
-
-Still shipped for anyone who wants a stock layout baked into Omarchy’s
-`themed/` templates (replaces `MangoHud.conf` on every theme set — smashes
-custom Goverlay layouts). Install once from this theme directory:
-
-```bash
-bash install-mangohud.sh
-```
-
-OmaHud’s installer removes `theme-set.d/mangohud` when present so the two
-approaches do not fight. Goverlay’s cube needs a real GPU path; CPU-only nested
-VMs staying dark is normal.
 
 ## Extend further with plugins
 
