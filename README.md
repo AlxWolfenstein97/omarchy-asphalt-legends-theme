@@ -23,7 +23,6 @@ of *Asphalt Legends* — **not affiliated with Gameloft** (see
 ```bash
 omarchy theme install https://github.com/AlxWolfenstein97/omarchy-asphalt-legends-theme.git
 # optional — About + screensaver ASCII for this theme (skippable; see Branding)
-mkdir -p ~/.config/omarchy/branding
 cp ~/.config/omarchy/themes/asphalt-legends/about.txt ~/.config/omarchy/branding/about.txt
 cp ~/.config/omarchy/themes/asphalt-legends/screensaver.txt ~/.config/omarchy/branding/screensaver.txt
 ```
@@ -38,7 +37,6 @@ Or clone into place (then you *do* need an explicit set):
 git clone https://github.com/AlxWolfenstein97/omarchy-asphalt-legends-theme.git ~/.config/omarchy/themes/asphalt-legends
 omarchy theme set "Asphalt Legends"
 # optional branding — same as above
-mkdir -p ~/.config/omarchy/branding
 cp ~/.config/omarchy/themes/asphalt-legends/about.txt ~/.config/omarchy/branding/about.txt
 cp ~/.config/omarchy/themes/asphalt-legends/screensaver.txt ~/.config/omarchy/branding/screensaver.txt
 ```
