@@ -149,7 +149,7 @@ already keeps them in lockstep.
 |--------|----------------|
 | **[OmaOBS](https://github.com/AlxWolfenstein97/omaobs)** | OBS Studio (real Yami `Omarchy.ovt`) |
 | **[OmaCursor](https://github.com/AlxWolfenstein97/omacursor)** | Pointer / Adwaita XCursor recolor (+ optional SDDM) |
-| **[OmaHud](https://github.com/AlxWolfenstein97/omahud)** | MangoHud colours only — live in-game retint; Goverlay keeps metrics/layout (replaces the old full-file `.tpl`) |
+| **[OmaHud](https://github.com/AlxWolfenstein97/omahud)** | MangoHud colours only — live in-game retint; Goverlay keeps metrics/layout |
 | **[OmaBoot](https://github.com/AlxWolfenstein97/omaboot)** | Limine boot menu colours |
 | **[OmaVT](https://github.com/AlxWolfenstein97/omavt)** | Virtual console / TTY palette |
 | **[OmaTTY](https://github.com/AlxWolfenstein97/omatty)** | Console font (Terminus-first, accessibility) |
