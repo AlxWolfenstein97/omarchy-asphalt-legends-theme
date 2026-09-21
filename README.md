@@ -198,10 +198,7 @@ even with the black bars:
 ### Agent / desktop bridge
 
 - **[OMCP](https://github.com/btsouth/omarchy-omcp)** — MCP desktop bridge
-  (themes, windows, apps, …). Made iterating this theme a lot easier;
-  screenshots sometimes need the agent’s session env wired up depending on the
-  client (Claude-first, others optional). Not my project to patch — credit stays
-  either way:  
+  (themes, windows, apps, …):  
   `omarchy plugin add https://github.com/btsouth/omarchy-omcp --enable`
 
 Browse more on the [Omarchy Plugins](https://plugins.omarchy.org/) site.
