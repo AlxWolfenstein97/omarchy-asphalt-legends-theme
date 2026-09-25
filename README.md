@@ -11,7 +11,7 @@ of *Asphalt Legends* — **not affiliated with Gameloft** (see
 [Credits](#credits--legal-ish) below).
 
 <p align="center">
-  <img src="logo.png" alt="Asphalt Legends Unite Steam wordmark used for unlock / README" width="520" />
+  <img src="logo.png" alt="Asphalt Legends wordmark used for unlock / README" width="520" />
 </p>
 
 ![Desktop preview](preview.png)
@@ -221,11 +221,11 @@ this theme.)
 ## Credits / legal-ish
 
 - Visual inspiration and reference art from **Gameloft**’s *Asphalt* / *Asphalt
-  Legends Unite* branding and marketing. **Not affiliated with, endorsed by, or
+  Legends* branding and marketing. **Not affiliated with, endorsed by, or
   sponsored by Gameloft.** Just public pixels arranged into an Omarchy theme —
   no money, no official product.
-- Steam store wordmark (`logo_2x`) supplies `unlock.png` / `logo.png` / Plymouth
-  preview.
+- Official site wordmark ([asphaltlegends.com](https://asphaltlegends.com/))
+  supplies `unlock.png` / `logo.png` / Plymouth preview.
 - If Gameloft hates this existing, they can say so and I’ll deal with the repo
   accordingly.
 - Theming extenders grew out of time on Archinstall + Hyprland +
