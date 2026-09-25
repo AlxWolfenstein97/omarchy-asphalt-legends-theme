@@ -85,6 +85,10 @@ Image** try. In my experience Omarchy’s image→ASCII path is a bit thinicky o
 color and boxing, so don’t expect magic from the PNGs — the hand text is the
 good path.
 
+Screensaver / logo ASCII follows the current site wordmark proportions —
+**ASPHALT** over **LEGENDS**, with the AL shield on the right (no empty lines).
+About / icon is the funky AL shield alone (same silhouette as `icon.png`).
+
 ### Unlock
 
 Style → Unlock → pick this theme (`unlock.png` / `preview-unlock.png`).
