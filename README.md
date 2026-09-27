@@ -18,6 +18,22 @@ of *Asphalt Legends* — **not affiliated with Gameloft** (see
 
 ![Unlock / Plymouth preview](preview-unlock.png)
 
+Also in this series:
+[HEV Suit](https://github.com/AlxWolfenstein97/omarchy-hev-suit-theme),
+[Operation Galuga](https://github.com/AlxWolfenstein97/omarchy-operation-galuga-theme),
+[Counter-Strike](https://github.com/AlxWolfenstein97/omarchy-counter-strike-theme),
+[Cyber Shadow](https://github.com/AlxWolfenstein97/omarchy-cyber-shadow-theme),
+[Doom 2016](https://github.com/AlxWolfenstein97/omarchy-doom-2016-theme),
+[Doom Eternal](https://github.com/AlxWolfenstein97/omarchy-doom-eternal-theme),
+[Half-Life Caged](https://github.com/AlxWolfenstein97/omarchy-half-life-caged-theme),
+[Killer Instinct](https://github.com/AlxWolfenstein97/omarchy-killer-instinct-theme),
+[Metal Gear Rising](https://github.com/AlxWolfenstein97/omarchy-metal-gear-rising-theme),
+[Stanley Parable](https://github.com/AlxWolfenstein97/omarchy-stanley-parable-theme),
+[Street Fighter 6](https://github.com/AlxWolfenstein97/omarchy-street-fighter-6-theme),
+[Terminator 2D: NO FATE](https://github.com/AlxWolfenstein97/omarchy-terminator-2d-no-fate-theme),
+and
+[Ultra Street Fighter IV](https://github.com/AlxWolfenstein97/omarchy-ultra-street-fighter-iv-theme).
+
 ## Install
 
 ```bash
@@ -175,8 +191,10 @@ omarchy plugin add https://github.com/AlxWolfenstein97/omatty.git --enable --yes
 ```
 
 **Boom-out — one paste.** Teardown + ledger pkg drop + plugin remove.
-`--purge-tombstones` also clears Style quiet-install stamps (same-session re-arm
-needs a loud install otherwise — why lives on the plugin READMEs).
+Ledger drops only what we recorded pulling; may fail and stay if something else
+still needs the package (e.g. Goverlay after Pillow) — fine. `--purge-tombstones`
+also clears Style quiet-install stamps (same-session re-arm needs a loud install
+otherwise — why lives on the plugin READMEs).
 
 ```bash
 ~/.config/omarchy/plugins/io.github.alxwolfenstein97.chroma/tools/wipe-all-family.sh --purge-tombstones
