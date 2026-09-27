@@ -209,15 +209,10 @@ full wipe: `…/<plugin>/uninstall.sh --yes`.
 
 - **[Omacord](https://github.com/ASwenia/omacord)** — Vesktop / Vencord Discord
   follows Omarchy themes live. No theme carousel / mockup picker: it **syncs**,
-  and that’s the right call. Mockups for a chat web client are content-shaped
-  layouts anyway — you censor half the shot and still aren’t showing a true
-  layout. I did not have to extend the whole theming system for chat myself:  
+  and that’s the right call. Chat mockups are content-shaped anyway — you
+  censor half the shot and still aren’t showing a true layout. I did not have
+  to extend the whole theming system for chat myself:  
   `omarchy plugin add https://github.com/ASwenia/omacord --enable`
-
-Omacord on Vesktop with this theme (DMs / names redacted) — one shot is enough,
-even with the black bars:
-
-![Vesktop with Omacord on Asphalt Legends](docs/vesktop-omacord.png)
 
 ### Agent / desktop bridge
 
