@@ -4,7 +4,9 @@ Remember the races? The hyprdrive? TouchDrive, even? Maybe not so much the
 microtransactions. What if your desktop felt like you’re quirk-screwing and
 nitro-boosting through that neon-drenched night pack — magenta city glow, cyan
 streaks, purple-black asphalt under the wheels — instead of another flat dark
-mode that could belong to anyone?
+mode that could belong to anyone? Hyprland’s active border runs the same
+dual-accent trick as HEV, Galuga, CS, Cyber Shadow, Doom 2016, Eternal, Caged, KI, Rising, Stanley, SF6, T2D & USFIV:
+**magenta → cyan** at 45°.
 
 Neon night-pack theme for [Omarchy](https://omarchy.org/). Inspired by the look
 of *Asphalt Legends* — **not affiliated with Gameloft** (see
