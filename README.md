@@ -2,15 +2,18 @@
 
 Remember the races? The hyprdrive? TouchDrive, even? Maybe not so much the
 microtransactions. What if your desktop felt like you’re quirk-screwing and
-nitro-boosting through that neon-drenched night pack — magenta city glow, cyan
-streaks, purple-black asphalt under the wheels — instead of another flat dark
-mode that could belong to anyone? Hyprland’s active border runs the same
-dual-accent trick as HEV, Galuga, CS, Cyber Shadow, Doom 2016, Eternal, Caged, KI, Rising, Stanley, SF6, T2D & USFIV:
-**magenta → cyan** at 45°.
+nitro-boosting through that neon-drenched night pack — in-game violet chrome
+(`#D000FF` cursor on borders / keyboard, brand `#9246FF` on toolkit accents),
+cyan nitro streaks, purple-black asphalt under the wheels — instead of another
+flat dark mode that could belong to anyone? Hyprland’s active border runs the
+same dual-accent trick as HEV, Galuga, CS, Cyber Shadow, Doom 2016, Eternal,
+Caged, KI, Rising, Stanley, SF6, T2D & USFIV: **violet → cyan** at 45°.
 
 Neon night-pack theme for [Omarchy](https://omarchy.org/). Inspired by the look
 of *Asphalt Legends* — **not affiliated with Gameloft** (see
-[Credits](#credits--legal-ish) below).
+[Credits](#credits--legal-ish) below). See
+[Closer than we started](#closer-than-we-started) for how the hexes were
+pulled and why `accent` is not a 1:1 cursor paste.
 
 <p align="center">
   <img src="logo.png" alt="Asphalt Legends wordmark used for unlock / README" width="520" />
@@ -232,12 +235,47 @@ Browse more on the [Omarchy Plugins](https://plugins.omarchy.org/) site.
 and similar “own paint engine / remote CSS” surfaces are out of scope on purpose
 — documented in Chroma’s README. Unthemed beats a half-assed chase.
 
+## Closer than we started
+
+Refine pass (2026-10): sample the live UI, then split loud chrome from filled
+toolkit accents so Qt menus / GTK selection fills stay readable at a glance.
+
+1. **Cursor-literal punch** — Settings + account-linking screenshots with the
+   in-game mouse cursor visible. Dominant neon pixel cluster lands on
+   `#D000FF` (old brand note `#C800FE`; logo “LEGENDS” stays softer on the
+   wordmark). Preview check: Omarchy/Adwaita pointer on top of the in-game
+   cursor — same hue, different shape. That hex stays on `magenta`,
+   `keyboard.rgb`, lock `border-active`, and the first stop of the Hyprland
+   dual border — places that are outlines / LEDs, not big text-on-fill
+   surfaces.
+2. **Toolkit `accent`** — Pure `#D000FF` as Chroma/Qt/GTK `accent` blows out
+   menu highlights and Disks partition selection (works if you squint, fails
+   at a glance). `accent` is therefore brand violet `#9246FF` (post-Unite
+   main) — same family as the cursor, closer than the old pink `#FF52B0`,
+   not a literal pixel paste into every filled control.
+3. **UI void** — Dark purple menu backgrounds (~`#180A2C`) and header bar
+   (~`#502094`) nudge `background` / `lighter_background` /
+   `hyprland_inactive_border`. Shop yellow `#FFD400` updates `yellow`.
+4. **Cyan nitro** — Keep electric `#40F0FF` as the second border stop (light
+   trails / neon pack), not the flatter currency-token azure.
+5. **Walls** — Empty Brooklyn POV wall swapped for Gameloft’s clean loading
+   **key art** (`backgrounds/3-bridge-keyart.jpg`, same composition as the
+   in-game loading screen, no player-ID / ratings chrome). Coastal ram stays
+   as `#4`. Freecam race shots skipped — Asphalt watermarks the freecam view.
+6. **Unlock mock** — `preview-unlock.png` regenerated the usual Omarchy way:
+   `background` + `foreground` Plymouth assets composited with site
+   `unlock.png` (pass field is foreground, not accent — matches real
+   `omarchy-plymouth-set`).
+
+Race freecam is a no-go for walls while the watermark is there; menu / loading
+/ official CDN art is the clean lane.
+
 ## Taste
 
-Colours and contrast are tuned for what I like to look at. If they feel loud or
-wrong for you, fork and retune `colors.toml` without guilt. (Console font sizing
-for low vision lives in [OmaTTY](https://github.com/AlxWolfenstein97/omatty), not
-this theme.)
+Anchored on in-game samples, then tuned so filled accents don’t eat labels.
+If they feel loud or wrong for you, fork and retune `colors.toml` without
+guilt. (Console font sizing for low vision lives in
+[OmaTTY](https://github.com/AlxWolfenstein97/omatty), not this theme.)
 
 ## Credits / legal-ish
 
@@ -247,6 +285,10 @@ this theme.)
   no money, no official product.
 - Official site wordmark ([asphaltlegends.com](https://asphaltlegends.com/))
   supplies `unlock.png` / `logo.png` / Plymouth preview.
+- Loading key art wall from the official site CDN
+  (`Banner_Key_Art_Shadow` on `asphalt9.assets.gameloft.com`).
+- Palette refine sampled from local in-game Settings / Gameloft Connect UI
+  screenshots (cursor + chrome), not from a third-party theme pack.
 - If Gameloft hates this existing, they can say so and I’ll deal with the repo
   accordingly.
 - Theming extenders grew out of time on Archinstall + Hyprland +

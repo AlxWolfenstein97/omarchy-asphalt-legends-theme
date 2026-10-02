@@ -1,37 +1,39 @@
 mode = "dark"
 
-# Neon night pack — magenta city glow + cyan nitro
-# Loud accent for Limine / borders / Plymouth chrome; pastel ANSI + lifted
-# darker_background so OmaVT/TTY pops (same slot split as Doom Eternal).
-accent = "#FF52B0"
-selection = "#2A1848"
-muted = "#6A5A88"
+# Neon night pack — electric violet + cyan nitro.
+# Cursor-literal #D000FF stays on borders / ANSI magenta / keyboard LEDs.
+# `accent` is brand violet #9246FF (post-Unite main) so Qt/GTK/Chroma menus
+# stay readable — same family as the in-game cursor, not as loud on fills.
+# Sampled from in-game settings UI + cursor (2026-10-02); tuned for toolkit chrome.
+accent = "#9246FF"
+selection = "#2A1450"
+muted = "#6E5A9A"
 
-background = "#10081C"
+background = "#14081F"
 dark_background = "#0A0514"
 darker_background = "#0C0618"
-lighter_background = "#1E1438"
+lighter_background = "#241448"
 
 foreground = "#F2E8FF"
 dark_foreground = "#8A7AAA"
 light_foreground = "#D4C4F0"
 bright_foreground = "#FFFFFF"
 
-hyprland_active_border = "rgba(FF52B0ee) rgba(40F0FFee) 45deg"
-hyprland_inactive_border = "rgba(2A1848aa)"
+hyprland_active_border = "rgba(D000FFee) rgba(40F0FFee) 45deg"
+hyprland_inactive_border = "rgba(502094aa)"
 
 red = "#FF6B88"
-yellow = "#FFE066"
+yellow = "#FFD400"
 orange = "#FF8A40"
 green = "#6AFFB0"
 cyan = "#40F0FF"
 blue = "#7A9AFF"
-magenta = "#FF52B0"
+magenta = "#D000FF"
 brown = "#7A4A5A"
 
 bright_red = "#FF8AA0"
-bright_yellow = "#FFF099"
+bright_yellow = "#FFE866"
 bright_green = "#9AFFC8"
 bright_cyan = "#80F8FF"
 bright_blue = "#A0B8FF"
-bright_magenta = "#FF90C8"
+bright_magenta = "#E070FF"
