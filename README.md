@@ -3,7 +3,7 @@
 Remember the races? The hyprdrive? TouchDrive, even? Maybe not so much the
 microtransactions. What if your desktop felt like you’re quirk-screwing and
 nitro-boosting through that neon-drenched night pack — in-game violet chrome
-(`#D000FF` cursor on borders / keyboard, brand `#9246FF` on toolkit accents),
+(`#D000FF` cursor on borders / keyboard, brand `#9246FF` as main `accent`),
 cyan nitro streaks, purple-black asphalt under the wheels — instead of another
 flat dark mode that could belong to anyone? Hyprland’s active border runs the
 same dual-accent trick as HEV, Galuga, CS, Cyber Shadow, Doom 2016, Eternal,
@@ -237,8 +237,8 @@ and similar “own paint engine / remote CSS” surfaces are out of scope on pur
 
 ## Closer than we started
 
-Refine pass (2026-10): sample the live UI, then split loud chrome from filled
-toolkit accents so Qt menus / GTK selection fills stay readable at a glance.
+Refine pass (2026-10): sample the live UI, then split loud outline chrome from
+the main `accent` fill so selections / highlights stay readable at a glance.
 
 1. **Cursor-literal punch** — Settings + account-linking screenshots with the
    in-game mouse cursor visible. Dominant neon pixel cluster lands on
@@ -246,13 +246,13 @@ toolkit accents so Qt menus / GTK selection fills stay readable at a glance.
    wordmark). Preview check: Omarchy/Adwaita pointer on top of the in-game
    cursor — same hue, different shape. That hex stays on `magenta`,
    `keyboard.rgb`, lock `border-active`, and the first stop of the Hyprland
-   dual border — places that are outlines / LEDs, not big text-on-fill
-   surfaces.
-2. **Toolkit `accent`** — Pure `#D000FF` as Chroma/Qt/GTK `accent` blows out
-   menu highlights and Disks partition selection (works if you squint, fails
-   at a glance). `accent` is therefore brand violet `#9246FF` (post-Unite
-   main) — same family as the cursor, closer than the old pink `#FF52B0`,
-   not a literal pixel paste into every filled control.
+   dual border — outlines / LEDs, not the main filled accent slot.
+2. **Main `accent`** — Pasting pure `#D000FF` into `accent` is too loud on
+   every filled highlight across the desktop (menus, selections, Disks
+   partitions, … — works if you squint, fails at a glance). `accent` is
+   therefore brand violet `#9246FF` (post-Unite main) — same family as the
+   cursor, closer than the old pink `#FF52B0`, not a literal pixel paste into
+   the primary accent.
 3. **UI void** — Dark purple menu backgrounds (~`#180A2C`) and header bar
    (~`#502094`) nudge `background` / `lighter_background` /
    `hyprland_inactive_border`. Shop yellow `#FFD400` updates `yellow`.

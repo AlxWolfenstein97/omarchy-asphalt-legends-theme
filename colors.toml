@@ -2,9 +2,9 @@ mode = "dark"
 
 # Neon night pack — electric violet + cyan nitro.
 # Cursor-literal #D000FF stays on borders / ANSI magenta / keyboard LEDs.
-# `accent` is brand violet #9246FF (post-Unite main) so Qt/GTK/Chroma menus
-# stay readable — same family as the in-game cursor, not as loud on fills.
-# Sampled from in-game settings UI + cursor (2026-10-02); tuned for toolkit chrome.
+# Main `accent` is brand violet #9246FF (post-Unite) — same family, readable
+# on filled highlights; not a 1:1 cursor paste into every accent surface.
+# Sampled from in-game settings UI + cursor (2026-10-02); mid-ground tune.
 accent = "#9246FF"
 selection = "#2A1450"
 muted = "#6E5A9A"
