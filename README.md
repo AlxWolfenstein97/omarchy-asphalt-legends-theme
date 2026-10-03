@@ -219,6 +219,12 @@ full wipe: `…/<plugin>/uninstall.sh --yes`.
   to extend the whole theming system for chat myself:  
   `omarchy plugin add https://github.com/ASwenia/omacord --enable`
 
+- **[Omarchy Cava](https://github.com/duncio/omarchy-cava)** — theme-aware audio
+  bars along the bottom of an empty workspace (hides when windows show up). Goes
+  well with your music when you're vibing — not much to show in a rice shot with
+  windows open, which is the point:  
+  `omarchy plugin add https://github.com/duncio/omarchy-cava --enable`
+
 ### Agent / desktop bridge
 
 - **[OMCP](https://github.com/btsouth/omarchy-omcp)** — MCP desktop bridge
