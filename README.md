@@ -209,7 +209,6 @@ plugin READMEs).
 `install.sh` (asks [Y/n]) — lives on that plugin’s GitHub README. Single-plugin
 full wipe: `…/<plugin>/uninstall.sh --yes`.
 
-
 ### Already solved elsewhere (gladly)
 
 - **[Omacord](https://github.com/ASwenia/omacord)** — Vesktop / Vencord Discord
@@ -218,12 +217,6 @@ full wipe: `…/<plugin>/uninstall.sh --yes`.
   censor half the shot and still aren’t showing a true layout. I did not have
   to extend the whole theming system for chat myself:  
   `omarchy plugin add https://github.com/ASwenia/omacord --enable`
-
-- **[Omarchy Cava](https://github.com/duncio/omarchy-cava)** — theme-aware audio
-  bars along the bottom of an empty workspace (hides when windows show up). Goes
-  well with your music when you're vibing — not much to show in a rice shot with
-  windows open, which is the point:  
-  `omarchy plugin add https://github.com/duncio/omarchy-cava --enable`
 
 ### Agent / desktop bridge
 
