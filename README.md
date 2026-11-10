@@ -209,6 +209,14 @@ plugin READMEs).
 `install.sh` (asks [Y/n]) — lives on that plugin’s GitHub README. Single-plugin
 full wipe: `…/<plugin>/uninstall.sh --yes`.
 
+### Browser (manual)
+
+- **[OmaWeb](https://github.com/AlxWolfenstein97/omaweb)** — reshapes the
+  official Catppuccin userstyles bundle to the active `colors.toml` and hands it
+  to the normal Stylus extension, with an optional Dark Reader export for sites
+  no userstyle covers. Manual by design: no Appearance row and no family boom.
+  Browser flags and the one-time Stylus import are covered on that README.
+
 ### Already solved elsewhere (gladly)
 
 - **[Omacord](https://github.com/ASwenia/omacord)** — Vesktop / Vencord Discord
@@ -230,9 +238,10 @@ full wipe: `…/<plugin>/uninstall.sh --yes`.
 Browse more on the [Omarchy Plugins](https://plugins.omarchy.org/) site.
 
 **Honest stop-line:** these extenders only chase places that accept color data
-(or a clean conversion). Websites, Steam chrome, document paper in LibreOffice,
-and similar “own paint engine / remote CSS” surfaces are out of scope on purpose
-— documented in Chroma’s README. Unthemed beats a half-assed chase.
+(or a clean conversion). Steam chrome, document paper in LibreOffice, and similar
+“own paint engine” surfaces are out of scope on purpose — documented in Chroma’s
+README. Websites are not; that is OmaWeb’s manual, browser-side job. Unthemed
+beats a half-assed chase.
 
 ## Closer than we started
 
